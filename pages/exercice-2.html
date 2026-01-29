@@ -1,0 +1,149 @@
+<!--
+    Fichier : exercice-2.html
+    Page dédiée à l'affichage de deux tableaux :
+    - Suivi des mouvements de caisses
+    - Horaires d'ouverture
+    Utilisation de balises sémantiques (<header>, <main>, <footer>) et de <time> pour les dates/heures.
+    L'attribut "border" est utilisé à des fins pédagogiques.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Exercice 1</a></li>
+                <li><a href="./exercice-2.html">Exercice 2</a></li>
+                <li><a href="./exercice-3.html">Exercice 3</a></li>
+                <li><a href="./exercice-4.html">Exercice 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <!-- L'attribut "border" est obsolète en HTML5, mais il est utilisé ici à des fins pédagogiques 
+             pour visualiser rapidement les bordures du tableau sans avoir à écrire de CSS -->
+        <table border="1">
+
+            <caption style="margin: 15px;">Suivi des mouvements de caisses</caption>
+
+            <tr>
+                <th>Date</th>
+                <th>Débit</th>
+                <th>Crédit</th>
+                <th>Balance</th>
+            </tr>
+
+            <tr>
+                <td><strong><time datetime="2024-02-01">01/02/2024</time></strong></td>
+                <td></td>
+                <td>250,00</td>
+                <td>+250,00</td>
+            </tr>
+            <tr>
+                <td><time datetime="2024-02-02">02/02/2024</time></td>
+                <td>100,00</td>
+                <td></td>
+                <td>+150,00</td>
+            </tr>
+            <tr>
+                <td><time datetime="2024-02-03">03/02/2024</time></td>
+                <td>50,00</td>
+                <td>150,00</td>
+                <td>+250,00</td>
+            </tr>
+            <tr>
+                <td><time datetime="2024-02-04">04/02/2024</time></td>
+                <td></td>
+                <td></td>
+                <td>+250,00</td>
+            </tr>
+            <tr>
+                <td><time datetime="2024-02-05">05/02/2024</time></td>
+                <td>150,00</td>
+                <td></td>
+                <td>+250,00</td>
+            </tr>
+            <tr>
+                <th>Totaux</th>
+                <td>150,00</td>
+                <td>400,00</td>
+                <td>+250,00</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- L'attribut "border" est obsolète en HTML5, mais il est utilisé ici à des fins pédagogiques 
+             pour visualiser rapidement les bordures du tableau sans avoir à écrire de CSS -->
+        <table border="1">
+
+            <caption style="margin: 15px;">Horaires d'ouverture</caption>
+
+            <tr>
+                <th rowspan="2">Jour</th>
+                <th colspan="2">Matin</th>
+                <th colspan="2">Après-Midi</th>
+            </tr>
+
+            <tr>
+                <th><time datetime="09:00">09h00</time></th>
+                <th><time datetime="12:00">12h00</time></th>
+                <th><time datetime="14:00">14h00</time></th>
+                <th><time datetime="18:00">18h00</time></th>
+            </tr>
+            <tr>
+                <td>Lundi</td>
+                <td colspan="2">Fermé</td>
+                <td colspan="2">Ouvert</td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td colspan="2">Ouvert</td>
+                <td colspan="2">Ouvert</td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td colspan="2">Ouvert</td>
+                <td colspan="2">Ouvert</td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td colspan="2">Ouvert</td>
+                <td colspan="2">Ouvert</td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td colspan="2">Ouvert</td>
+                <td colspan="2">Ouvert</td>
+            </tr>
+            <tr>
+                <td>Samedi</td>
+                <td colspan="2">Ouvert</td>
+                <td colspan="2">Fermé</td>
+            </tr>
+            <tr>
+                <td>Dimanche</td>
+                <td colspan="4">Fermé</td>
+            </tr>
+
+        </table>
+    </main>
+
+    <hr>
+
+    <footer>
+        <small><a href="../index.html">Retour à la page d'accueil</a></small>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!--
+    Fichier : exercice-3.html
+    Page dédiée à un formulaire de contact.
+    Utilisation de balises sémantiques (<header>, <main>, <footer>),
+    de <fieldset> pour regrouper les champs, et de l'attribut required pour la validation.
+    Les boutons "Valider" (submit) et "Effacer" (reset) sont présents.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Exercice 1</a></li>
+                <li><a href="./exercice-2.html">Exercice 2</a></li>
+                <li><a href="./exercice-3.html">Exercice 3</a></li>
+                <li><a href="./exercice-4.html">Exercice 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Informations personnelles</legend>
+
+                <input type="radio" id="Mlle" name="civilite" value="Mlle" checked>
+                <label for="Mlle">Mlle</label>
+
+                <input type="radio" id="Mme" name="civilite" value="Mme">
+                <label for="Mme">Mme</label>
+
+                <input type="radio" id="M" name="civilite" value="M">
+                <label for="M">M.</label>
+
+                <br>
+
+                <label for="name">Prénom</label>
+                <input type="text" id="name" placeholder="Votre prénom">
+
+                <br>
+
+                <label for="firstname">Nom<sup>*</sup></label>
+                <input type="text" id="firstname" placeholder="Votre nom" required>
+
+                <br>
+
+                <label for="email">Email<sup>*</sup></label>
+                <input type="email" id="email" placeholder="Votre adresse mail" required>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre message</legend>
+
+                <label for="destination">Destinataire</label>
+                <select name="destination" id="destination">
+                    <option value="General">Général</option>
+                    <option value="Accounting">Comptabilité</option>
+                    <option value="AfterSalesService">SAV</option>
+                    <option value="Customer Service">Service Client</option>
+                </select>
+
+                <br>
+
+                <label for="subject">Sujet<sup>*</sup></label>
+                <input type="text" id="subject" placeholder="L'objet de votre message" required>
+
+                <br>
+
+                <label for="message">Message<sup>*</sup></label>
+                <textarea id="message" cols="60" rows="10" placeholder="Saisissez votre message ici" required></textarea>
+
+                <br>
+
+                <label for="fichier">Ajouter une pièce jointe :</label>
+                <input type="file" id="fichier" name="fichier">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Options</legend>
+
+                <input type="checkbox" id="copy">
+                <label for="copy">Recevoir une copie du message</label>
+
+                <br>
+
+                <input type="checkbox" id="offer">
+                <label for="offer">Recevoir nos offres</label>
+
+                <hr>
+
+                <span>Être contacté par un conseiller</span>
+
+                <input type="radio" id="Non" name="choice" value="Non">
+                <label for="Non">Non</label>
+
+                <input type="radio" id="phonenumber" name="choice" value="phone number">
+                <label for="phonenumber">Par téléphone</label>
+
+                <input type="radio" id="mail" name="choice" value="mail" checked>
+                <label for="mail">Par mail</label>
+
+            </fieldset>
+
+            <small><sup>*</sup> : champs obligatoire</small>
+
+            <br>
+
+            <input type="submit" value="Valider">
+            <input type="reset" value="Effacer">
+
+        </form>
+    </main>
+
+    <hr>
+
+    <footer>
+        <a href="../index.html">Retour à la page d'accueil</a>
+    </footer>
+
+</body>
+</html>
